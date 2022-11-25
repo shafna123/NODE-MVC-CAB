@@ -29,7 +29,13 @@ const passenger = db.sequelize.define('passenger',{
         type: DataTypes.INTEGER,
         allowNull: false,
     
+    },
+
+    password:{
+        type: DataTypes.STRING(200),
+        allowNull:false,
     }
+
 });
 
 module.exports = passenger;

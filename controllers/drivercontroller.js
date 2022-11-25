@@ -2,11 +2,12 @@ const db = require('../models/driver');
 const {body, validationResult} = require('express-validator');
 
 
-module.exports.getAll = (req,res,next)=>{
-   db.findAll()
-   .then(result=>{
-    res.json(result);
-   });
+module.exports.index = (req, res, next) => {
+    movie.findAll().then(movies => {
+        res.render('movie-index', {
+            data: movies
+        });
+    })
 }
 
 // module.exports.getOne = (req,res,next)=>{

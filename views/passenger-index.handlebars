@@ -1,0 +1,28 @@
+<h1 class="text-center">Passenger</h1>
+<div class="container">
+    <a href="/create" class="btn btn-primary">+ New Passenger</a>
+    <table class="table table-striped mt-4">
+        <tr>
+            <th>Id</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+            <th>Password</th>
+        </tr>
+        {{#each data}}
+        <tr>
+            <td>{{this.dataValues.id}}</td>
+            <td>{{this.dataValues.firstName}}</td>
+            <td>{{this.dataValues.lastName}}</td>
+            <td>{{this.dataValues.email}}</td>
+            <td>{{this.dataValues.mobile_number}}</td>
+            <td>{{this.dataValues.password}}</td>
+            <td>
+                <a href="/update/{{this.dataValues.id}}">Edit</a> |
+                <a href="/delete/{{this.dataValues.id}}" class="text-danger" onclick="return confirm('Are you sure you want to delete this')">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

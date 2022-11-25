@@ -23,6 +23,14 @@ const cabdetails = db.sequelize.define('cabdetails',{
         type: DataTypes.INTEGER,
         allowNull: false
 
+    },
+    driver_id:{
+        type:DataTypes.INTEGER,
+        references:{
+            model:'drivers',
+            key:'driver_id'
+        },
+        allowNull: false
     }
     
    

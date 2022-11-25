@@ -2,14 +2,20 @@ const passenger = require('./passenger')
 
 passenger.sync({alter: true});
 
-const booking = require('./booking')
+// const booking = require('./booking')
 
-booking.sync({alter: true});
+// booking.sync({alter: true});
 
-const driver = require('./driver')
+// const driver = require('./driver')
 
-driver.sync({alter: true});
+// driver.sync({alter: true});
 
-const cabdetails = require('./cabdetails')
+// const cabdetails = require('./cabdetails')
 
-cabdetails.sync({alter: true});
+// cabdetails.sync({alter: true});
+
+
+
+const user = require('./user')
+
+user.sync({alter: true});
