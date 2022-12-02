@@ -1,23 +1,14 @@
+
 const express = require('express');
 const dc = require('../controllers/drivercontroller');
 
 const router = express.Router()
 
-// router.get('/all', function(req,res){
-//     res.json({
-//         "page": "LIST OF CUSTOMERS"
-//     })
-// });
-          //OR
-
-router.get('/driver', dc.getAll);
-// router.get('/customer/:id',cc.getOne);
-// router.post('/customer',cc.validate('create'), cc.addOne);
-
-// router.get('/one', function(req,res){
-//     res.json({
-//         "page": "GET ONE CUSTOMER"
-//     })
-// });
+router.get('/', dc.driverIndex);
+router.get('/create', dc.driverCreate);
+router.post('/create', dc.driverCreatePost);
+router.get('/update/:id', dc.driverUpdate);
+router.post('/update/:id', dc.driverUpdatePost);
+router.get('/delete/:id', dc.driverDelete);
 
 module.exports = router;

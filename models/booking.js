@@ -1,9 +1,16 @@
-const {Sequelize,DataTypes} = require('sequelize')
+const {Sequelize,DataTypes, INTEGER} = require('sequelize')
 
 const db = require('./db');
 
 
 const booking = db.sequelize.define('booking',{
+
+    booking_id:{
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+    },
+
     cab_model:{
         type: DataTypes.STRING(200),
         allowNull: false
@@ -29,10 +36,27 @@ const booking = db.sequelize.define('booking',{
         allowNull: false
 
     },
-    passenger_number:{
+     pick_up_time:{
+       type: DataTypes.TIME,
+       allowNull:false 
+     },
+    // passenger_number:{
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false
+
+    // }
+    id:{
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    cab_id:{
         type: DataTypes.INTEGER,
         allowNull: false
 
+    },
+    cost:{
+        type:DataTypes.INTEGER,
+        allowNull: false
     }
    
 });

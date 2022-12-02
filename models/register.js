@@ -3,7 +3,7 @@ const {Sequelize,DataTypes} = require('sequelize')
 const db = require('./db');
 
 
-const passenger = db.sequelize.define('passenger',{
+const register = db.sequelize.define('passenger',{
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -34,10 +34,6 @@ const passenger = db.sequelize.define('passenger',{
     password:{
         type: DataTypes.STRING(200),
         allowNull:false,
-    },
-    role:{
-        type:DataTypes.INTEGER,
-        defaultValue: 0,
     }
 
 });

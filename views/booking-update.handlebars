@@ -1,0 +1,76 @@
+
+<div>
+   <style>
+    body{
+        background-image: url("https://images.unsplash.com/photo-1582820795651-f358eebe4406?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHRheGl8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style></div>
+
+  <h1 class="text-center">Booking Details</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 offset-sm-3">
+        <form method="post" action="/booking/update/{{id}}">
+        
+          {{!-- <div>
+          <label for="name">Booking ID</label>
+          <input type="text" name="booking_id" id="booking_id" class="form-control" placeholder=""  value="{{data.dataValues.booking_id}}">
+         </div> --}}
+        
+
+          <div>
+          <label for="name">Cab Model</label>
+          <input type="text" name="cab_model" id="cab_model" class="form-control" placeholder=""  value="{{data.dataValues.cab_model}}">
+         </div>
+         <div>
+          <label for="name">Date of Booking</label>
+          <input type="date" name="date_of_booking" id="date_of_booking" class="form-control" placeholder=""  value="{{data.dataValues.date_of_booking}}">
+         </div>
+         <div>
+          <label for="name">Date of Travel</label>
+          <input type="date" name="date_of_travel" id="date_of_travel" class="form-control" placeholder=""  value="{{data.dataValues.date_of_travel}}">
+         </div>
+         <div>
+          <label for="name">Pick Up Location</label>
+          <input type="text" name="pick_up_location" id="pick_up_location" class="form-control" placeholder=""  value="{{data.dataValues.pick_up_location}}">
+         </div>
+         <div>
+          <label for="name">Drop Off Location</label>
+          <input type="text" name="drop_off_location" id="drop_off_location" class="form-control" placeholder=""  value="{{data.dataValues.drop_off_location}}">
+         </div>
+         <div>
+          <label for="name">Pick Up Time</label>
+          <input type="time" name="pick_up_time" id="pick_up_time" class="form-control" placeholder=""  value="{{data.dataValues.pick_up_time}}">
+         </div>
+         {{!-- <div>
+         <label for="name">ID</label>
+          <input type="text" name="id" id="id" class="form-control" placeholder="" value="{{data.dataValues.id}}">
+         </div>
+          <div>
+         <label for="name">Driver ID</label>
+          <input type="text" name="driver_id" id="driver_id" class="form-control" placeholder="" value="{{data.dataValues.driver_id}}">
+         </div>
+         <div>
+          <label for="name">Cab ID</label>
+          <input type="text" name="cab_id" id="cab_id" class="form-control" placeholder="" value="{{data.dataValues.cab_id}}">
+         </div> --}}
+         <pre>
+         </pre>
+         {{!-- {{#if result}}
+         {{#if result.success }}
+         <div class="alert alert-success">Data Saved Successfully♻</div>
+         {{else}}
+         <div class="alert alert-danger">Saving Failed</div>
+         {{/if}}
+         {{/if}} --}}
+          <div class="d-grid mt-5">
+            <button class="btn btn-primary">SAVE</button>
+          </div>
+           
+          
+        </form>
+      </div>
+    </div>
+  </div>

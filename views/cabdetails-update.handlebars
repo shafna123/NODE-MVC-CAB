@@ -1,0 +1,60 @@
+<h1 class="text-center">Cab Details</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 offset-sm-3">
+        <form method="post">
+        
+        
+         
+          <div>
+          <label for="name">Cab ID</label>
+          <input type="text" name="cab_id" id="cab_id" class="form-control" placeholder="" value="{{data.dataValues.cab_id}}">
+          </div>
+
+         <div>
+          <label for="name">Cab Model</label>
+          <input type="text" name="cab_model" id="cab_model" class="form-control" placeholder="" value="{{data.dataValues.cab_model}}">
+         </div>
+
+         <div>
+          <label for="name">Cab Number</label>
+          <input type="text" name="cab_number" id="cab_number" class="form-control" placeholder="" value="{{data.dataValues.cab_number}}">
+         </div>
+
+         <div>
+          <label for="name">Cab Capacity</label>
+          <input type="text" name="cab_capacity" id="cab_capacity" class="form-control" placeholder="" value="{{data.dataValues.cab_capacity}}">
+         </div>
+
+         <div>
+          <label for="name">Driver ID</label>
+          <input type="text" name="driver_id" id="driver_id" class="form-control" placeholder="" value="{{data.dataValues.driver_id}}">
+         </div>
+       
+         
+{{!-- <div>
+          <label for="name">Driver ID</label>
+          <input type="text" name="driver_id" id="driver_id" class="form-control" placeholder="">
+         </div>
+<div>
+          <label for="name">Cab ID</label>
+          <input type="text" name="cab_id" id="cab_id" class="form-control" placeholder="">
+         </div> --}}
+        <pre>
+        </pre>
+         {{!-- {{#if result}}
+         {{#if result.success }}
+         <div class="alert alert-success">Data Saved Successfully♻</div>
+         {{else}}
+         <div class="alert alert-danger">Saving Failed</div>
+         {{/if}}
+         {{/if}} --}}
+          <div class="d-grid mt-5">
+            <button class="btn btn-primary">SAVE</button>
+          </div>
+           
+          
+        </form>
+      </div>
+    </div>
+  </div>

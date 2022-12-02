@@ -4,16 +4,19 @@ const db = require('./db');
 
 
 const cabdetails = db.sequelize.define('cabdetails',{
+
+    cab_id:{
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        allowNull: false
+
+    },
     cab_model:{
         type: DataTypes.STRING(200),
         allowNull: false
 
     },
-    cab_id:{
-        type: DataTypes.INTEGER,
-        allowNull: false
-
-    },
+    
     cab_number:{
         type: DataTypes.STRING(200),
         allowNull: false
@@ -26,12 +29,10 @@ const cabdetails = db.sequelize.define('cabdetails',{
     },
     driver_id:{
         type:DataTypes.INTEGER,
-        references:{
-            model:'drivers',
-            key:'driver_id'
-        },
+
         allowNull: false
     }
+ 
     
    
 });

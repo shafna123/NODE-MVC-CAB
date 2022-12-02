@@ -24,7 +24,7 @@ module.exports.createPost = (req, res, next) => {
            password: req.body.password
        })
        .then(user => {
-           res.redirect("/");
+           res.redirect("/login");
        })
 }
 

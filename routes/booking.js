@@ -1,23 +1,15 @@
+
 const express = require('express');
-const bc = require('../controllers/bookingcontroller');
+const bc = require('../controllers/bookingcontrollers');
 
 const router = express.Router()
 
-// router.get('/all', function(req,res){
-//     res.json({
-//         "page": "LIST OF CUSTOMERS"
-//     })
-// });
-          //OR
-
-router.get('/booking', bc.getAll);
-// router.get('/customer/:id',cc.getOne);
-// router.post('/customer',cc.validate('create'), cc.addOne);
-
-// router.get('/one', function(req,res){
-//     res.json({
-//         "page": "GET ONE CUSTOMER"
-//     })
-// });
+router.get('/', bc.bookingIndex);
+router.get('/create/:cab_id', bc.bookingCreate);
+router.post('/create/:cab_id', bc.bookingCreatePost);
+router.get('/update/:id', bc.bookingUpdate);
+router.post('/update/:id', bc.bookingUpdatePost);
+router.get('/delete/:id', bc.bookingDelete);
+// router.post('/booking/:cab_id', bc.booking);
 
 module.exports = router;

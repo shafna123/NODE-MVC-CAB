@@ -1,21 +1,46 @@
 const passenger = require('./passenger')
 
-passenger.sync({alter: true});
+passenger.sync({alter:true});
 
-// const booking = require('./booking')
+const booking = require('./booking')
 
-// booking.sync({alter: true});
+booking.sync();
 
-// const driver = require('./driver')
+const driver = require('./driver')
 
-// driver.sync({alter: true});
+driver.sync();
 
-// const cabdetails = require('./cabdetails')
-
-// cabdetails.sync({alter: true});
+const cabdetails = require('./cabdetails');
 
 
+cabdetails.sync();
 
-const user = require('./user')
+const payment = require('./payment')
 
-user.sync({alter: true});
+payment.sync({alter:true});
+
+
+// const user = require('./user')
+
+// user.sync();
+
+
+driver.hasMany(cabdetails,{foreignKey:'driver_id'});
+cabdetails.belongsTo(driver,{
+    foreignKey:'driver_id'
+});
+
+// driver.hasMany(booking,{foreignKey:'driver_id'});
+// booking.belongsTo(driver,{
+//     foreignKey:'driver_id'
+// });
+
+cabdetails.hasMany(booking,{foreignKey:'cab_id'});
+booking.belongsTo(cabdetails,{
+    foreignKey:'cab_id'
+});
+
+passenger.hasMany(booking,{foreignKey:'id'});
+booking.belongsTo(passenger,{
+    foreignKey:'id'
+});

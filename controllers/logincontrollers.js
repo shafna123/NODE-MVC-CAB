@@ -17,7 +17,7 @@ module.exports.loginPost = async (req, res, next)=>{
     }
 
     req.session.userId = userFromDb.id;
-    res.redirect('/');
+    res.redirect('/home2');
 }
 
 module.exports.register = (req, res, next)=>{
@@ -25,7 +25,7 @@ module.exports.register = (req, res, next)=>{
 }
 
 module.exports.registerPost = async (req, res, next)=>{
-    const {firstName, lastName, email, password } = req.body;
+    const {firstName, lastName, email,mobile_number, password } = req.body;
     let existingUser = await passenger.findOne({
         where: {
             email: email
@@ -40,6 +40,7 @@ module.exports.registerPost = async (req, res, next)=>{
         firstName: firstName,
         lastName: lastName,
         email: email,
+        mobile_number: mobile_number,
         password: password
     });
 

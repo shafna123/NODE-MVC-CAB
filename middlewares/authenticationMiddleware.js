@@ -6,7 +6,7 @@ module.exports = async (req, res, next) => {
         user: null
     }
 
-    if(req.url == "/login" || req.url == "/create"){
+    if(req.url == "/login" || req.url == "/register"){
         return next();
     }
 
@@ -26,7 +26,7 @@ module.exports = async (req, res, next) => {
         firstName: userFromDb.dataValues.firstName,
         lastName: userFromDb.dataValues.lastName,
         email: userFromDb.dataValues.email,
-        role: 'user'
+        role: userFromDb.dataValues.role
     }
     next();
 }
