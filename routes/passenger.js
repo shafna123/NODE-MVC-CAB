@@ -9,5 +9,5 @@ router.post('/create', pc.createPost);
 router.get('/update/:id', pc.update);
 router.post('/update/:id', pc.updatePost);
 router.get('/delete/:id', pc.delete);
-
+router.get('/logout/', pc.logout);
 module.exports = router;

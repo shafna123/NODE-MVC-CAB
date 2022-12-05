@@ -87,3 +87,8 @@ module.exports.delete = async (req, res, next) => {
         res.redirect("/");
     }
 }
+
+module.exports.logout = (req, res, next)=>{
+    req.session.userId = null;
+    return res.redirect('/login');
+}
