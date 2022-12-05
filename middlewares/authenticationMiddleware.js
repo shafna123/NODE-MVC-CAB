@@ -19,7 +19,6 @@ module.exports = async (req, res, next) => {
     if(userFromDb == null){
         return res.redirect("/login");
     }
-
     req.identity.isAuthenticated = true;
     req.identity.passenger = {
         id: userFromDb.dataValues.id,

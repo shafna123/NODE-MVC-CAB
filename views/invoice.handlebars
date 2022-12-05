@@ -1,0 +1,38 @@
+<div class="col-sm-5 offset-sm-4">
+    <div class=" card w-75 text-center">
+  <div class="card-header">
+    <h4 class="card-title">Thank For Your Booking</h4>
+  </div>
+  <div class="card-body">
+    
+   <table class="table">
+            <tr>
+                <th>Name</th>
+                <td>{{name}}</td>
+            </tr>
+            <tr>
+                <th>Pick up location</th>
+                <td>{{invoice.dataValues.pick_up_location}}</td>
+            </tr>
+            <tr>
+                <th>Drop location</th>
+                <td>{{invoice.dataValues.drop_off_location}}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{invoice.dataValues.date_of_travel}}</td>
+            </tr>
+            <tr>
+                <th>Time</th>
+                <td>{{invoice.dataValues.pick_up_time}}</td>
+            </tr>
+            
+            <tr>
+                <th>Cost</th>
+                <td>{{invoice.dataValues.cost}}</td>
+            </tr>
+        </table>
+     <button class="btn btn-success">Print pdf</button>
+  </div>
+</div>
+</div>

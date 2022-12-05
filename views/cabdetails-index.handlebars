@@ -43,4 +43,20 @@
         {{!-- <button class="btn btn-success">Add Cab</button> --}}
              <a href="/cabdetails/create" class="btn btn-success"> ADD CAB </a>
         {{/if}}
+
+         {{#if cab.role}}
+        {{!-- <button class="btn btn-success">Add Cab</button> --}}
+             <a href="/driver/create" class="btn btn-success"> ADD Driver</a>
+        {{/if}}
+
+           {{#if cab.role}}
+        {{!-- <button class="btn btn-success">Add Cab</button> --}}
+             <a href="/driver/" class="btn btn-success"> View Driver Details</a>
+        {{/if}}
+
+          {{#if cab.role}}
+        {{!-- <button class="btn btn-success">Add Cab</button> --}}
+             <a href="/booking/" class="btn btn-success"> View Booking Details</a>
+        {{/if}}
+
 </div>

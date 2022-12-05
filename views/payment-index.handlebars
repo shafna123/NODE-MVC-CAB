@@ -21,10 +21,13 @@
            
               
             <td>
-                <a href="/payment/update/{{this.dataValues.id}}">Edit</a> |
-                <a href="/payment/delete/{{this.dataValues.id}}" class="text-danger" onclick="return confirm('Are you sure you want to delete this')">Delete</a>
+                {{!-- <a href="/payment/update/{{this.dataValues.id}}">Edit</a> |
+                <a href="/payment/delete/{{this.dataValues.id}}" class="text-danger" onclick="return confirm('Are you sure you want to delete this')">Delete</a> --}}
+                <td><a href="/booking/paymentDetails/{{this.dataValues.id}}">Pay Now</a></td>
             </td>
         </tr>
         {{/each}}
+
     </table>
+
 </div>
