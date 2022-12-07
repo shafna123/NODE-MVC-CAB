@@ -10,8 +10,11 @@ router.post('/create/:cab_id', bc.bookingCreatePost);
 router.get('/update/:id', bc.bookingUpdate);
 router.post('/update/:id', bc.bookingUpdatePost);
 router.get('/delete/:id', bc.bookingDelete);
-router.get('/paymentInvoice/:id', bc.paymentInvoice);
+router.get('/invoice/:id', bc.paymentInvoice);
 router.get('/paymentDetails/:id', bc.paymentDetails);
-// router.post('/booking/:cab_id', bc.booking);
+router.get('/viewBookings',bc.viewBooking);
+router.post('/viewBookings',bc.searchBookingByDate)
+// router.post('/paymentDetails/:id',bc.paymentDetails)
+// // router.post('/booking/:cab_id', bc.booking);
 
 module.exports = router;

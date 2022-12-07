@@ -4,7 +4,7 @@ passenger.sync({alter:true});
 
 const booking = require('./booking')
 
-booking.sync();
+booking.sync({alter:true});
 
 const driver = require('./driver')
 
@@ -13,7 +13,7 @@ driver.sync();
 const cabdetails = require('./cabdetails');
 
 
-cabdetails.sync();
+// cabdetails.sync();
 
 const payment = require('./payment')
 

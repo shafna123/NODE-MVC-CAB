@@ -12,7 +12,36 @@
 <div class="container">
     <a href="/cabdetails/create" class="btn btn-primary">+ BOOK NOW </a>
     <table class="table table-striped mt-5">
-       
+      {{#if cab.role}} 
+      <tr>
+           {{!-- <th>Booking ID</th> --}}
+            <th>Cab ID</th>
+            <th>Cab Model</th>
+            <th>Cab Number</th>
+            <th>Cab Capacity</th>
+            <th>Driver ID</th>
+           
+          
+        </tr>
+        {{#each data}}
+      
+            <td>{{this.dataValues.cab_id}}</td>
+            <td>{{this.dataValues.cab_model}}</td>
+            <td>{{this.dataValues.cab_number}}</td>
+            <td>{{this.dataValues.cab_capacity}}</td>
+            <td>{{this.dataValues.driver_id}}</td>
+           
+                  
+            <td>
+                <a href="/cabdetails/update/{{this.dataValues.cab_id}}">Edit</a> |
+                <a href="/cabdetails/delete/{{this.dataValues.cab_id}}" class="text-danger" onclick="return confirm('Are you sure you want to delete this')">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+
+
+       {{else}}
+ 
         <tr>
            {{!-- <th>Booking ID</th> --}}
             <th>Cab ID</th>
@@ -38,25 +67,31 @@
             </td> --}}
         </tr>
         {{/each}}
-    </table>
-     {{#if cab.role}}
+
+        {{/if}}
+        
+        </table>
+        {{#if cab.role}}
         {{!-- <button class="btn btn-success">Add Cab</button> --}}
              <a href="/cabdetails/create" class="btn btn-success"> ADD CAB </a>
         {{/if}}
 
-         {{#if cab.role}}
+        {{#if cab.role}}
         {{!-- <button class="btn btn-success">Add Cab</button> --}}
              <a href="/driver/create" class="btn btn-success"> ADD Driver</a>
         {{/if}}
 
-           {{#if cab.role}}
+        {{#if cab.role}}
         {{!-- <button class="btn btn-success">Add Cab</button> --}}
              <a href="/driver/" class="btn btn-success"> View Driver Details</a>
         {{/if}}
 
-          {{#if cab.role}}
+         
+        
+        {{#if cab.role}}
         {{!-- <button class="btn btn-success">Add Cab</button> --}}
-             <a href="/booking/" class="btn btn-success"> View Booking Details</a>
+             <a href="/booking/viewBookings/" class="btn btn-success"> View Booking Details</a>
         {{/if}}
+        
 
 </div>

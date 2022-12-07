@@ -20,17 +20,23 @@
                 <label for="cvv">CVV Number</label>
                 <input type="number" name="cvv" id="cvv" class="form-control">
             </div>
-            {{!-- <div>
-                <div>
+            
+             <div>
                     <label for="amount">Amount</label>
-                    <div>{{data.cost}}</div>
-                </div>
+                    <div>{{data.dataValues.cost}}</div>
+            </div> 
                 
-            </div> --}}
+          
 
         </div>
         <div class="col-sm-6 offset-sm-5">
-            <button class="btn btn-outline-success"><a href="/booking/paymentInvoice/{{data.dataValues.id}}">Pay Now</a></button>
+            <button class="btn btn-outline-success"><a href="/booking/invoice/{{data.dataValues.booking_id}}">Pay Now</a></button>
         </div>
     </div>
+      <div>
+            <td>
+                <a href="/booking/update/{{data.dataValues.booking_id}}">Edit</a> |
+                <a href="/booking/delete/{{data.dataValues.booking_id}}" class="text-danger" onclick="return confirm('Are you sure you want to delete this')">Delete</a>
+            </td>
+            </div>
 </div>

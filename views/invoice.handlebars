@@ -1,7 +1,11 @@
-<div class="col-sm-5 offset-sm-4">
+<pre>
+
+
+
+</pre><div class="col-sm-5 offset-sm-4">
     <div class=" card w-75 text-center">
   <div class="card-header">
-    <h4 class="card-title">Thank For Your Booking</h4>
+    <h4 class="card-title">Thanks For Your Booking and happy journey😊</h4>
   </div>
   <div class="card-body">
     
@@ -32,7 +36,14 @@
                 <td>{{invoice.dataValues.cost}}</td>
             </tr>
         </table>
-     <button class="btn btn-success">Print pdf</button>
+     <button class="btn btn-success" id="btnprinthide" onclick=printpdf()>Print pdf</button>
   </div>
 </div>
 </div>
+<script>
+    const btn = document.getElementById('btnprinthide')
+    function printpdf(){
+        btn.style.display='none';
+        return window.print()
+    }
+</script>
