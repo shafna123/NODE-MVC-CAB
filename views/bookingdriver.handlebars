@@ -5,34 +5,7 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
-</style>
-   
-
-</div>
-
-<pre>
-
-
-</pre>
-<div class="col-sm-6 offset-sm-3">
-    <form method="post">
-    <label for="date" >Date</label>
-    <input type="date" name="date" id="date" class="form-control">
-    <button type="submit" class="btn btn-primary" onclick="changeFlag()">Search</button>
-
-
-</form>
-
-</div>
-
-{{#if found}}
-    <div class="alert alert-warning" role="alert">
-  No bookings found!
-</div>
-
-{{/if}}
-
-</div>
+</style></div>
 <h1 class="text-center"></h1>
 <div class="container">      
     <table class="table table-striped mt-5 ">
@@ -60,16 +33,10 @@
             <td>{{this.dataValues.id}}</td>
             <td>{{this.dataValues.cab_id}}</td>
             <td>{{this.dataValues.cost}}</td>
-            {{!-- <td>
-                <a href="/booking/update/{{this.dataValues.booking_id}}">Edit</a> |
-                <a href="/booking/delete/{{this.dataValues.booking_id}}" class="text-danger" onclick="return confirm('Are you sure you want to delete this')">Delete</a>
-            </td> --}}
+            
         </tr>
         {{/each}}
     </table>
+   
 
-    </div>
-
-
-
-    
+</div>

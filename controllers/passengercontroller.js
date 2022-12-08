@@ -37,24 +37,6 @@ module.exports.update = (req, res, next) => {
        });
 }
 
-// module.exports.updatePost = (req, res, next) => {
-//     movie.findByPk(req.params.id)
-//         .then(user => {
-//             movie.update({
-//                     name: req.body.name,
-//                     releaseDate: req.body.releasedate,
-//                     summary: req.body.summary,
-//                     director: req.body.director
-//                 }, {
-//                     where: {
-//                         id: req.params.id
-//                     }
-//                 })
-//                 .then(count => {
-//                     res.redirect('/');
-//                 });
-//         });
-// }
 
 module.exports.updatePost = async (req, res, next) => {
    var passengerFromDb = await passenger.findByPk(req.params.id);

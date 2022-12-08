@@ -1,3 +1,6 @@
+
+
+
 <h1 class="text-center"></h1>
 <div class="container">
     {{!-- <a href="/driver/create" class="btn btn-primary">+ NEW DRIVER </a> --}}
@@ -8,6 +11,8 @@
             <th>Driver Name</th>
             <th>Driver Mobile Number</th>
             <th>Gender</th>
+             <th>Driver Email</th>
+              <th>Driver Paasword</th>
           
           
         </tr>
@@ -18,7 +23,8 @@
             <td>{{this.dataValues.driver_name}}</td>
             <td>{{this.dataValues.driver_mobile_number}}</td>
             <td>{{this.dataValues.gender}}</td>
-           
+            <td>{{this.dataValues.driver_email}}</td>
+             <td>{{this.dataValues.driver_password}}</td>
               
             <td>
                 <a href="/driver/update/{{this.dataValues.driver_id}}">Edit</a> |

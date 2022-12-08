@@ -84,25 +84,6 @@ module.exports.bookingUpdate = (req, res, next) => {
         });
 }
 
-// module.exports.updatePost = (req, res, next) => {
-//     movie.findByPk(req.params.id)
-//         .then(user => {
-//             movie.update({
-//                     name: req.body.name,
-//                     releaseDate: req.body.releasedate,
-//                     summary: req.body.summary,
-//                     director: req.body.director
-//                 }, {
-//                     where: {
-//                         id: req.params.id
-//                     }
-//                 })
-//                 .then(count => {
-//                     res.redirect('/');
-//                 });
-//         });
-// }
-
 module.exports.bookingUpdatePost = async (req, res, next) => {
     console.log(req.params.id);
     var bookingFromDb = await booking.findByPk(req.params.id);

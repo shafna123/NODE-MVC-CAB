@@ -16,7 +16,10 @@ module.exports.loginPost = async (req, res, next)=>{
         return res.render('login', {message: 'No user with this email or password was found.'})
     }
 
+    
+
     req.session.userId = userFromDb.id;
+    req.session.role = 1,
     res.redirect('/home2');
 }
 
